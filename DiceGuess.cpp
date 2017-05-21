@@ -3,6 +3,7 @@
 #include <iostream> 
 #include <vector>
 #include "DiceGuess.h"
+#include "Rand_int.h"
 
 using namespace std;
 
@@ -18,10 +19,11 @@ void Game::start()
 
 void Player::generate()
 {
+    Rand_int rnd {1, 6};
     int r;
     for (int i = 0; i != 5; ++i)
     {
-        r = rand() % 6 + 1;
+        r = rnd();
         dices[i] = static_cast<Dice>(r);
     }
 }
