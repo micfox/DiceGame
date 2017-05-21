@@ -1,3 +1,4 @@
+#include <string>
 
 enum class Dice : char {
     One=1, Two, Three, Four, Five, Six
@@ -9,15 +10,16 @@ enum class PlayOrder {
 
 const static int DiceNumber = 5;
     
-class Player {
+using namespace std;
 
+class Player {
     Dice dices[DiceNumber];
     string name;
 public:
     Player(string n) {name = n;}
     void generate();
     void showDices();
-}
+};
 
 class Game {
     Player user;
