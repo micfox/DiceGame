@@ -1,5 +1,5 @@
 
-enum class Dice {
+enum class Dice : char {
     One=1, Two, Three, Four, Five, Six
 };
 
