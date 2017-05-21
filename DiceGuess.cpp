@@ -3,9 +3,9 @@
 #include <iostream> 
 #include <string>
 #include <vector>
+#include "DiceGuess.h"
 
 using namespace std;
-
 
 
 void Game::start()
@@ -31,7 +31,7 @@ void Player::showDices()
 {
     cout << "Player: " << name << endl;
     cout << "{ ";
-    for (int i = 0; i != DiceNumber)
+    for (int i = 0; i != DiceNumber; ++i)
     {
         cout << dice[i] << ' ';
     }
