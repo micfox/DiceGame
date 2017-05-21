@@ -33,7 +33,7 @@ void Player::showDices()
     cout << "{ ";
     for (int i = 0; i != DiceNumber; ++i)
     {
-        cout << dice[i] << ' ';
+        cout << dices[i] << ' ';
     }
     cout << "}\n";
 }
