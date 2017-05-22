@@ -6,7 +6,9 @@ enum class Dice : char {
 
 class PlayOrder {
     enum Order { UserFirst = 0, CounterFirst};
-    
+    Order order;
+public:
+    Order operator() {
 };
 
 const static int DiceNumber = 5;
