@@ -13,7 +13,7 @@ struct Claim {
     string name;
     int num;
     Dice dice;
-	Claim() : name{ "" }, num{ 0 }, dice{ Dice::One } { }
+	Claim() { }
 	Claim(string name, int num, Dice dice) {
 		this->name = name;
 		this->num = num;
