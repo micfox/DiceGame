@@ -5,7 +5,7 @@ enum class Dice : char {
 };
 
 enum class PlayOrder {
-    UserFirst, CounterFirst
+    UserFirst = 0, CounterFirst
 };
 
 const static int DiceNumber = 5;
