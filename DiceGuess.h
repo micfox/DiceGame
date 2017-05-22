@@ -4,8 +4,9 @@ enum class Dice : char {
     One=1, Two, Three, Four, Five, Six
 };
 
-enum class PlayOrder {
-    UserFirst = 0, CounterFirst
+class PlayOrder {
+    enum Order { UserFirst = 0, CounterFirst};
+    
 };
 
 const static int DiceNumber = 5;
