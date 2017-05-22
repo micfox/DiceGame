@@ -38,3 +38,10 @@ void Player::showDices()
     }
     cout << "}\n";
 }
+
+void PlayOrder::generate()
+{
+    Rand_int rnd {0, 1};
+    order = static_cast<Order>(rnd());
+}
+
