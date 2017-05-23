@@ -85,7 +85,7 @@ public:
     Game()
     {
         add_player(new UserPlayer{"SuperMe", game_info});
-        add_player(new UserPlayer{"AnotherMe", game_info});
+        add_player(new ComputerPlayer{"BeatCPU", game_info});
     }
 
 	~Game() { for (auto p : players) delete p; }
