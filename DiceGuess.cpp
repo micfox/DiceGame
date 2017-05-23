@@ -139,6 +139,13 @@ Claim ComputerPlayer::action()
 	//
 	//count my dices
 	//analyse claim
+    if (game_info.claims.size() == 0)
+	{
+		int num;
+		Dice dice;
+		for (int i = 0; i < DiceNumber; ++i)
+		{
+			if (	
 	Claim last_claim = game_info.claims.back();
 	int mydice_num = this->get_num(last_claim.dice);
 	if ( (mydice_num + 2) < last_claim.num )

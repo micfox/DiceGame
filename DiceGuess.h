@@ -6,8 +6,6 @@
 
 using namespace std;
 
-const string doubt_word = "dbt";
-
 enum class Dice : char {
     One=1, Two, Three, Four, Five, Six
 };
