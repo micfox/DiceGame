@@ -72,6 +72,10 @@ public:
     Claim action();
 };
 
+class Brain {
+//devise a Claim
+};
+
 class Game {
     vector<Player*> players;
     Game_info game_info;

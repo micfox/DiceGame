@@ -1,4 +1,5 @@
 
+
 #include <iostream> 
 #include <vector>
 #include "DiceGuess.h"
@@ -99,7 +100,7 @@ int Player::get_num(Dice dice) const
 {
     int sum = 0;
     for (auto d : dices)
-        if (d == dice) ++sum;
+        if (d == dice || d == Dice::One) ++sum;
     return sum;
 }
 
@@ -138,6 +139,11 @@ Claim ComputerPlayer::action()
 	//
 	//count my dices
 	//analyse claim
+	Claim last_claim = game_info.claims.back();
+	int mydice_num = this->get_num(last_claim.dice);
+	if ( mydice_num + 2) < last_claim.num )
+		return Claim{"", 0, Dice::One};
+	return Claim{this->get_name, ++last_claim.num, last_claim.dice};
 	//devise a claim
 }
 
