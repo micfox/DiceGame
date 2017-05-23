@@ -132,6 +132,12 @@ Claim UserPlayer::action()
     return Claim{name, num, static_cast<Dice>(dice)};
 }
 
+Claim ComputerPlayer::action
+{
+	cout << this->get_name() << "'s action:\n";
+	
+}
+
 void Game_info::init()
 {
     claims.clear(); 

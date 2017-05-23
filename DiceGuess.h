@@ -38,7 +38,6 @@ public:
 };
 
 const static int DiceNumber = 5;
-    
 
 class Player {
 protected:
@@ -63,6 +62,12 @@ public:
     Claim action();
 };
 
+class ComputerPlayer : public Player {
+public:
+    ComputerPlayer(string name, const Game_info& game_info)
+    : Player(name, game_info) { }
+    Claim action();
+};
 
 class Game {
     vector<Player*> players;
@@ -72,17 +77,12 @@ class Game {
 public:
     Game()
     {
-        //UserPlayer p1 {"Super", game_info};
-        //UserPlayer p2 {"Another", game_info};
-        //add_player(p1);
-        //add_player(p2);
-
         add_player(new UserPlayer{"SuperMe", game_info});
         add_player(new UserPlayer{"AnotherMe", game_info});
-//        add_player(ComputerPlayer{"Computer01", claims});
     }
 
 	~Game() { for (auto p : players) delete p; }
+	
     void display_players_dices() const;
     void start();
     void judge();
