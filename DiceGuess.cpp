@@ -141,9 +141,9 @@ Claim ComputerPlayer::action()
 	//analyse claim
 	Claim last_claim = game_info.claims.back();
 	int mydice_num = this->get_num(last_claim.dice);
-	if ( mydice_num + 2) < last_claim.num )
+	if ( (mydice_num + 2) < last_claim.num )
 		return Claim{"", 0, Dice::One};
-	return Claim{this->get_name, ++last_claim.num, last_claim.dice};
+	return Claim{this->get_name(), ++last_claim.num, last_claim.dice};
 	//devise a claim
 }
 
