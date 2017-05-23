@@ -1,3 +1,6 @@
+// Dice guess game
+//立意: 实现一个猜骰子游戏，通过与机器对战，研究可能获胜的概率和取胜策略。可以设置机器的策略。可以与玩家对战。有统计胜率的功能。
+
 #include <string>
 #include <vector>
 
